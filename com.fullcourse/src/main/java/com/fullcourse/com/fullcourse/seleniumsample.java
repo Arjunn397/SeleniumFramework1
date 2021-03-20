@@ -19,7 +19,7 @@ public class seleniumsample
 	{
 		ChromeOptions options = new ChromeOptions(); 
 		options.addArguments("--disable-notifications");
-		System.setProperty("webdriver.chrome.driver", "/Users/arjun/eclipse-workspace/com.fullcourse/drivers/chromedriver/chromedriver");
+		System.setProperty("webdriver.chrome.driver", "/Users/arjun/git/SeleniumFramework1/com.fullcourse/drivers/chromedriver/chromedriver");
 		driver = new ChromeDriver();
 	}
 	
@@ -55,6 +55,17 @@ public class seleniumsample
 		
 	}
 	
+	public void logout() throws InterruptedException
+	{
+		driver.getWindowHandles();
+		driver.findElement(By.xpath("//button[@type='button']")).click();
+		driver.findElement(By.xpath("//div[contains(@class,'ant-col header__right')]")).click();
+		driver.findElement(By.xpath("//a[contains(text(),'Logout')]")).click();
+		Thread.sleep(20000);
+		
+		
+	}
+	
 	public void closeBrowser()
 	{
 		driver.close();
@@ -70,6 +81,7 @@ public class seleniumsample
 		s.openURL();
 		s.signIn();
 		s.Homescreen();
+		s.logout();
 		s.closeBrowser();
 		
 
