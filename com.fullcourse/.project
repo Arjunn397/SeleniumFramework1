@@ -20,4 +20,11 @@
 		<nature>org.eclipse.jdt.core.javanature</nature>
 		<nature>org.eclipse.m2e.core.maven2Nature</nature>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>Book1.xlsx</name>
+			<type>1</type>
+			<location>/Users/arjun/eclipse-workspace/PMF/excel/Book1.xlsx</location>
+		</link>
+	</linkedResources>
 </projectDescription>
