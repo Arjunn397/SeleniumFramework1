@@ -2,16 +2,20 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="86441" started-at="2021-03-25T20:32:13 IST" finished-at="2021-03-25T20:33:39 IST">
+  <suite name="Default suite" duration-ms="72538" started-at="2021-03-31T20:56:42 IST" finished-at="2021-03-31T20:57:55 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="86441" started-at="2021-03-25T20:32:13 IST" finished-at="2021-03-25T20:33:39 IST">
-      <class name="Sample.TestExcelUtil">
-        <test-method status="PASS" signature="htmlreport()[pri:0, instance:Sample.TestExcelUtil@3b088d51]" name="htmlreport" is-config="true" duration-ms="6810" started-at="2021-03-25T20:32:14 IST" finished-at="2021-03-25T20:32:21 IST">
+    <test name="Default test" duration-ms="72538" started-at="2021-03-31T20:56:42 IST" finished-at="2021-03-31T20:57:55 IST">
+      <class name="ExcelUtils.GetExcelData">
+        <test-method status="PASS" signature="initDriver()[pri:0, instance:ExcelUtils.GetExcelData@74650e52]" name="initDriver" is-config="true" duration-ms="4336" started-at="2021-03-31T20:56:42 IST" finished-at="2021-03-31T20:56:47 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- htmlreport -->
-        <test-method status="PASS" signature="test(java.lang.String, java.lang.String)[pri:0, instance:Sample.TestExcelUtil@3b088d51]" name="test" duration-ms="77555" started-at="2021-03-25T20:32:21 IST" data-provider="test1data" finished-at="2021-03-25T20:33:39 IST">
+        </test-method> <!-- initDriver -->
+        <test-method status="PASS" signature="setExtent()[pri:0, instance:ExcelUtils.GetExcelData@74650e52]" name="setExtent" is-config="true" duration-ms="229" started-at="2021-03-31T20:56:47 IST" finished-at="2021-03-31T20:56:47 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setExtent -->
+        <test-method status="PASS" signature="test(java.lang.String, java.lang.String)[pri:0, instance:ExcelUtils.GetExcelData@74650e52]" name="test" duration-ms="65797" started-at="2021-03-31T20:56:48 IST" data-provider="test1data" finished-at="2021-03-31T20:57:54 IST">
           <params>
             <param index="0">
               <value>
@@ -27,11 +31,22 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test -->
-        <test-method status="PASS" signature="endReport()[pri:0, instance:Sample.TestExcelUtil@3b088d51]" name="endReport" is-config="true" duration-ms="637" started-at="2021-03-25T20:33:39 IST" finished-at="2021-03-25T20:33:39 IST">
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:ExcelUtils.GetExcelData@74650e52]" name="tearDown" is-config="true" duration-ms="11" started-at="2021-03-31T20:57:54 IST" finished-at="2021-03-31T20:57:54 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=test status=SUCCESS method=GetExcelData.test(java.lang.String, java.lang.String)[pri:0, instance:ExcelUtils.GetExcelData@74650e52] output={null}]]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- endReport -->
-      </class> <!-- Sample.TestExcelUtil -->
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:ExcelUtils.GetExcelData@74650e52]" name="closeBrowser" is-config="true" duration-ms="695" started-at="2021-03-31T20:57:54 IST" finished-at="2021-03-31T20:57:55 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- ExcelUtils.GetExcelData -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

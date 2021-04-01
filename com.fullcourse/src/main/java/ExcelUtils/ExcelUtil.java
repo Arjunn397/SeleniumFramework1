@@ -17,12 +17,13 @@ public class ExcelUtil
 		sheet = wb.getSheet(sheetName);
 	}
 	
-	public  static int getRowCount()
+	
+	
+	public static int  getRowCount()
 	{
 		int rowCount = sheet.getPhysicalNumberOfRows();
 		System.out.println("Number of Rows :"+rowCount);
 		return rowCount;
-		
 	}
 	
 	public static int getColCount()
@@ -30,7 +31,6 @@ public class ExcelUtil
 		int colCount = sheet.getRow(0).getPhysicalNumberOfCells();
 		System.out.println("Number of Columns :"+colCount);
 		return colCount;
-		
 	}
 	
 	public static String getCellData(int rowNum, int colNum)
@@ -46,6 +46,5 @@ public class ExcelUtil
 		getColCount();
 		getCellData(0,0);
 	}
-	
 	
 }
