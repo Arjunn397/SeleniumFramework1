@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
@@ -25,8 +26,7 @@ import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 
 import Properties.PropertiesFile;
-//import com.extentReport.extentReporting.TestBase;
-//import com.extentReport.extentReporting.TestBase;
+
 
 public class TestBase 
 
@@ -50,15 +50,18 @@ public class TestBase
 		
 		System.setProperty("webdriver.chrome.driver", "/Users/arjun/git/SeleniumFramework1/com.fullcourse/drivers/chromedriver/chromedriver");
 		driver = new ChromeDriver();
+		
 		}
 		else if(browserName.equalsIgnoreCase("firefox"))
 		{
+			
 		System.setProperty("webdriver.gecko.driver", "/Users/arjun/git/SeleniumFramework1/com.fullcourse/drivers/geckodriver/geckodriver 2");
 		driver = new FirefoxDriver();
+		
 		}
 	}
 
-
+     //This Method will help to configure the Extent report
 	@BeforeTest
 	public void setExtent() 
 	{
@@ -80,6 +83,8 @@ public class TestBase
 
 	}
 	
+	
+	//This Method helps to get the status of the Testcase
 	@AfterMethod
 	public void tearDown(ITestResult result) throws IOException
 	{
@@ -104,6 +109,8 @@ public class TestBase
 
 		
 	}
+	
+	//This method helps to capture the screenshots
 	public static String getScreenshot(WebDriver driver, String screenshotName) throws IOException {
 		File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 	    FileUtils.copyFile(scrFile, new File("Failed screenshot.png"));
